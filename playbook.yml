@@ -1,4 +1,3 @@
----
 - name: Deployment of Genre Classification application
   hosts: all
   become: yes
@@ -28,11 +27,11 @@
     
     - name: Go to the directory genre_clf/server
       ansible.builtin.shell: 
-        cmd: cd {{ remote_dir}}/server
+        cmd: cd {{ remote_dir }}/server
   
-    - name: Install all requirement
+    - name: Install all requirements
       ansible.builtin.shell:
-      	cmd: pip install -r requirements.txt
+        cmd: pip install -r requirements.txt
 
     - name: Start python file
       ansible.builtin.shell:
