@@ -10,7 +10,7 @@
       - server/model/*.pkl
       - server/templates/*.html
       - server/utils/*.py
-     tasks:
+  tasks:
 
     - name: Ensure the target directory exists
       ansible.builtin.file:
@@ -32,10 +32,8 @@
   
     - name: Install all requirement
       ansible.builtin.shell:
-        cmd: pip install -r requirements.txt
+      	cmd: pip install -r requirements.txt
 
     - name: Start python file
       ansible.builtin.shell:
         cmd: python3 app.py
-        
-        
